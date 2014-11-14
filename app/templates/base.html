@@ -1,0 +1,18 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Home Page</title>
+    {% endif %}
+  </head>
+  <body style="width:800px">
+    <div>
+      <a href="/index">Home</a>
+      <a href="/add_question">Add question</a>
+      <a href="/manage_question">Manage question</a>
+    </div>
+    <hr />
+    {% block content %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/answer" method="post">
+<h1>Introduction:</h1>
+<p>{{ t[0] }}<p>
+{% for v in t[1] %}
+<div>
+  Question: <p>{{ v[2] }}</p>
+  <input type="radio" />A.{{ v[3] }}
+  <input type="radio" />A.{{ v[4] }}
+  <input type="radio" />A.{{ v[5] }}
+  <input type="radio" />A.{{ v[6] }}
+</div>
+{% endfor %}
+{% for v in t[2] %}
+<div>
+  Question: <p>{{ v }}</p>
+</div>
+{% endfor %}
+{% for v in t[3] %}
+<div>
+  Question: <p>{{ v[2] }}</p>
+</div>
+{% endfor %}
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

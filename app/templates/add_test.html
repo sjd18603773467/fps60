@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/manage_question" method="post">
+<h1>Introduction:</h1>
+<textarea name="introduction"></textarea>
+<h2>Select Questions:</h2>
+{% for t in all_select %}
+<div style="border:1px solid #0000FF">
+  <h6>Question: {{ t[2] }}</h6>
+  Take me in.<input type="checkbox" name={{ t[1] }} />
+</div>
+{% endfor %}
+<h2>Blank Questions:</h2>
+{% for t in all_blank %}
+<div style="border:1px solid #0000FF">
+  <h6>Question: {{ t[2] }}</h6>
+  Take me in.<input type="checkbox" name={{ 10000 + t[1] }} />
+</div>
+{% endfor %}
+<h2>Answer Questions:</h2>
+{% for t in all_answer %}
+<div style="border:1px solid #0000FF">
+  <h6>Question: {{ t[2] }}</h6>
+  Take me in.<input type="checkbox" name={{ 1000000 + t[1] }} />
+</div>
+{% endfor %}
+  <input type="submit" value="Create" />
+</form>
+{% endblock %}

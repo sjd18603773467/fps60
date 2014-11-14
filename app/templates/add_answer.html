@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form  action="/add_answer" method="post">
+      <h4>Question Overview:</h4>
+      <textarea name="question"></textarea>
+      <br />
+      <h4>Keywords:</h4>
+      <input type="text" name="answer"/>
+      <br />
+      <input type="submit" value="OK" />
+    </form>
+{% endblock %}
