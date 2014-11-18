@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Home Page</title>
+    <link type="text/css" rel="stylesheet" href="../static/layout.css" />
+  </head>
+  <body style="width:760px">
+    <header class="frame-header">
+      <h1>Social FAQ</h1>
+    </header>
+    <nav class="frame-nav">
+      <ul>
+        <li><a href="#">Homepage</a></li>
+      </ul>
+    </nav>
+    <div class="frame-div-mainbody">
+      <aside class="frame-aside-left">
+        <h2>ref</h2>
+        <ul class="nav">
+          <li><a href="/index">Homepage</a></li>
+          <li><a href="/question">question</a></li>
+          <li><a href="/test">test</a></li>
+          <li><a href="/invate">invate</a></li>
+          <li><a href="/score">score</a></li>
+        </ul>
+      </aside>
+      <section class="frame-section-right">
+        {% block content %}{% endblock %}
+      </section>
+    </div>
+    <footer class="frame-footer">
+      <h2>footer</h2>
+    </footer>
+  </body>
+</html>

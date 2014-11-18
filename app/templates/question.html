@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav>
+  <li>select</li>
+  <li>blank</li>
+  <li>answer</li>
+</nav>
+  {% for t in form %}
+    <div style="border:1px solid #0000FF; margin:2px">
+      <!--h5>Question {{ i }}:</h5-->
+      <h6>Question: {{ t[2] }}</h6>
+    </div>
+  {% endfor %}
+  <a href=
+  {% if question_type == 0: %}
+    {{ "/add_select" }}
+  {% elif question_type == 1: %}
+    {{ "/add_blank" }}
+  {% else: %}
+    {{ "/add_answer" }}
+  {% endif %}
+  >new question</a>
+{% endblock %}

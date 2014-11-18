@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>invate</h1>
+<form action="/invate" method="post">
+  <p>send test :
+  <select>
+    <option>hehe</option>
+    <option>haha</option>
+  </select>
+  to
+  <select>
+    <option>xiaoming</option>
+    <option>xiaohua</option>
+  </select>
+  </p>
+  <input type="submit" value="Send" />
+</form>
+{% endblock %}

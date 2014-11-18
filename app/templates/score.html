@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav>
+  <li>my question</li>
+  <li>my answer</li>
+</nav>
+  {% if not qoa or qoa == 0: %}
+    <h1>"/score_question"</h1>
+  {% else: %}
+    <h1>"/score_answer"</h1>
+  {% endif %}
+{% endblock %}

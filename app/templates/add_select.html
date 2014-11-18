@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="/add_select" method="post">
+      <!--h4>Question Type:</h4>
+      <select name="type_question">
+        <option>Select</option>
+        <option>Blank</option>
+        <option>Answer</option>
+      </select>
+      <br /-->
+      <h4>Question Overview:</h4>
+      <textarea name="question"></textarea>
+      <br />
+      <h4>Which is right? </h4>
+      <select name="right_select">
+         <option>A</option>
+         <option>B</option>
+         <option>C</option>
+         <option>D</option>
+      </select>
+      <br />
+      <h4>Select: </h4>
+      A. <input type="text" name="a" /><br />
+      B. <input type="text" name="b" /><br />
+      C. <input type="text" name="c" /><br />
+      D. <input type="text" name="d" /><br />
+      <input type="submit" value="OK" />
+    </form>
+{% endblock %}
