@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/test" method="post">
+<label>测试名</label>
+    <input type="text" name="introduction" />
+<!--h2>Select Questions:</h2-->
+    <table>
+        <tr>
+            <th>问题</th>
+        	<th>将我加入</th>
+    	</tr>
+{% for t in all_select %}
+        <tr>
+  <td style="border:1px solid #FF0000">{{ t[2] }}</td>
+    <td><input type="checkbox" name={{ t[0] }} /></td>
+        </tr>
+{% endfor %}
+<!--h2>Blank Questions:</h2-->
+{% for t in all_blank %}
+        <tr>
+  <td style="border:1px solid #00FF00">{{ t[2] }}</td>
+  <td><input type="checkbox" name={{ 10000 + t[0] }} /></td>
+        </tr>
+{% endfor %}
+<!--h2>Answer Questions:</h2-->
+{% for t in all_answer %}
+        <tr>
+  <td style="border:1px solid #0000FF">{{ t[2] }}</td>
+  <td><input type="checkbox" name={{ 1000000 + t[0] }} /></td>
+        </tr>
+{% endfor %}
+        </table>
+  <input type="submit" value="Create" />
+</form>
+{% endblock %}

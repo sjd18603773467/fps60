@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h5>{{ question[1] }}</h5>
+{% if question[0] == 0: %}
+<input type="radio" {% if question[6] == 0: %} checked = true {% endif %} />A.{{ question[2] }}
+<input type="radio" {% if question[6] == 1: %} checked = true {% endif %} />B.{{ question[3] }}
+<input type="radio" {% if question[6] == 2: %} checked = true {% endif %} />C.{{ question[4] }}
+<input type="radio" {% if question[6] == 3: %} checked = true {% endif %} />D.{{ question[5] }}
+{% else %}
+<input type="text" value="{{ question[2] }}" />
+{% endif %}
+
+{% endblock %}

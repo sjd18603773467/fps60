@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .score {
+        background:#DFDFDF;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>问题</th>
+        <th>名次</th>
+        <th>详细</th>
+    </tr>
+{% for i in score_list: %}
+    <tr>
+        <td>{{ i[0] }}</td>
+        <td {% if i[1] == 0: %} style="border-color:#0000FF" {% else: %} style="border-color:#FF0000" {% endif %} >{{ i[1] }}/{{ i[2] }}</td>
+        <td><a href="/rank?test_id={{ i[3] }}">R</a></td>
+    </tr>
+{% endfor %}
+</table>
+<p>说明：蓝色边框代表问题是我提出的，红色边框是我回答的问题，点击R查看该问题的详细排名。</p>
+{% endblock %}

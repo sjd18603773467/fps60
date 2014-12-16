@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script language="javascript">
+    function check_input2() {
+        if(document.getElementById('mm').value.split("^_^").length < 3) {
+            alert("请按要求填写");
+            return false;
+        }
+        return true;
+    }
+</script>
+    <form action="/add_blank" method="post" onsubmit="return check_input2();">
+      <h4>问题描述:</h4>
+      <textarea name="question" id="mm"></textarea>
+      <br />
+      <h4>示例:</h4>
+      <p>What ^_^is^_^ you name?</p>
+      <p>One plus one ^_^equals^_^ two.</p>
+      <input type="submit" value="OK" />
+    </form>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    .question {
+        background:#DFDFDF;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>问题</th>
+    	<th>详细</th>
+        <th>删除</th>
+  	</tr>
+	{% for t in all_select %}
+    <tr>
+  		<td style="border:1px solid #FF0000">{{ t[2] }}</td>
+        <td><a href="details?question_id={{ t[0] }}">D</a></td>
+        <td>X</td>
+    </tr>
+	{% endfor %}
+	{% for t in all_blank %}
+    <tr>
+  		<td style="border:1px solid #00FF00">{{ t[2] }}</td>
+        <td><a href="details?question_id={{ t[0] + 10000 }}">D</a></td>
+        <td>X</td>
+    </tr>
+	{% endfor %}
+	{% for t in all_answer %}
+    <tr>
+  		<td style="border:1px solid #0000FF">{{ t[2] }}</td>
+        <td><a href="details?question_id={{ t[0] + 1000000 }}">D</a></td>
+        <td>X</td>
+    </tr>
+	{% endfor %}
+</table>
+创建一个<a href="/add_select">新选择题</a>|<a href="/add_blank">新填空题</a>|<a href="/add_answer">新问答题</a>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    .test {
+        background:#DFDFDF;
+    }
+</style>
+<table>
+    <tr>
+        <th>测试</th>
+        <th>预览</th>
+        <th>删除</th>
+    </tr>
+	{% for t in all_test %}
+	<tr style="border:1px solid #0000FF">
+  		<td>{{ t[0] }}</td>
+    	<td><a href="preview?test_id={{ t[0] }}">P</a></td>
+  		<td>X</td>
+	</tr>
+	{% endfor %}
+</table>
+<a href="/add_test">创建一个新测试</a>
+
+{% endblock %}

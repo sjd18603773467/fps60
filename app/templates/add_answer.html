@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script language="javascript">
+    function check_input() {
+        if(document.getElementById('m1').value == "" || document.getElementById('m2').value == "") {
+            alert("请填完所有项");
+            return false;
+        }
+        return true;
+    }
+</script>
+    <form  action="/add_answer" method="post" onsubmit="return check_input();">
+      <h4>问题描述:</h4>
+      <textarea name="question" id="m1"></textarea>
+      <br />
+      <h4>答案:</h4>
+      <input type="text" name="answer" id="m2" />
+      <br />
+      <input type="submit" value="OK" />
+    </form>
+{% endblock %}

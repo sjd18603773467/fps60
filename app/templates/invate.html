@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .invate {
+        background:#DFDFDF;
+    }
+</style>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1857093371" type="text/javascript" charset="utf-8"></script>
+<script language="javascript">
+    WB2.anyWhere(function(W) {
+        W.widget.selector({
+            id: "wb_selector",
+            callback: set_friend()
+        });
+    });
+    //function set_friend()
+</script>
+<form action="/invate" method="post">
+    <h5>1.选择一个测试</h5>
+  <select name="test_id">
+      {% for t in test: %}
+      <option name="{{ t[0] }}">{{ t[0] }}</option>
+      {% endfor %}
+    <!--option>hehe</option>
+    <option>haha</option-->
+  </select>
+    <h5>2.选择一个好友</h5>
+    <!--input type="hidden" name="friend" id="friend" />
+    <button id="wb_selector" type="button"></button-->
+  <select name="to_name">
+      {% for f in friend: %}
+      <option name="{{ f }}">{{ f }}</option>
+      {% endfor %}
+  </select>
+    <h5>3.点击发送</h5>
+  <input type="submit" value="Send" />
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h5>{{ preview_list[0] }}</h5>
+{% for v in preview_list[1:] %}
+{% if v[0] == 0: %}
+  <h5>Q: {{ v[1] }}</h5>
+  <input type="radio" />A.{{ v[2] }}
+  <input type="radio" />B.{{ v[3] }}
+  <input type="radio" />C.{{ v[4] }}
+  <input type="radio" />D.{{ v[5] }}
+{% elif v[0] == 1: %}
+<h5>Q: {{ v[1].split('^_^')[0] }}
+        <input type="text" style="border:0; border-bottom:1px solid #0000FF" value = "{{ v[1].split('^_^')[1] }}" />
+    {{ v[1].split('^_^')[2] }}</h5>
+{% else %}
+    <h5>Q: {{ v[1] }}</h5>
+<input type="text" style="border:0; border-bottom:1px solid #0000FF" value="{{ v[2] }}" />
+{% endif %}
+{% endfor %}
+{% endblock %}

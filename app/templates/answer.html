@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/cal" method="post">
+    <p>测试 <select name="test_id"><option>{{ t[4] }}</option></select>{{ t[0] }}<p>
+{% for v in t[1] %}
+<div>
+  <h5>Q: {{ v[2] }}</h5>
+    <input type="radio" name="{{ v[0] }}" value="0" />A.{{ v[3] }}
+  <input type="radio" name="{{ v[0] }}" value = "1" />B.{{ v[4] }}
+  <input type="radio" name="{{ v[0] }}" value = "2" />C.{{ v[5] }}
+  <input type="radio" name="{{ v[0] }}" value = "3" />D.{{ v[6] }}
+</div>
+{% endfor %}
+{% for v in t[2] %}
+<div>
+    <h5>Q: {{ v[2].split('^_^')[0] }}
+    <input type="text" name="{{ v[0] + 10000 }}" style="border:0; border-bottom:1px solid #0000FF" />
+    {{ v[2].split('^_^')[2] }}</h5>
+</div>
+{% endfor %}
+{% for v in t[3] %}
+<div>
+    <h5>Q: {{ v[2] }}</h5>
+    <input type="text" name="{{ v[0] + 1000000 }}" />
+</div>
+{% endfor %}
+  <input type="submit" value="提交" />
+</form>
+{% endblock %}

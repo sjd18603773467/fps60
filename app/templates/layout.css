@@ -1,0 +1,150 @@
+
+
+body {
+	background-color:#DFDFDF;
+}
+
+ul, li {
+	margin:0;
+	padding:0;
+}
+
+.frame-header {
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+	margin-top:0px;
+        padding-top:10px;
+        padding-bottom:10px;
+	border-top-left-radius:16px 10px;
+	border-top-right-radius:16px 10px;
+	background-color:#BFBFBF;
+}
+
+.frame-nav {
+	width:90%;
+	margin:0;
+	padding:0;
+	margin-left:5%;
+	margin-right:5%;
+	background-color:#ADD8E6;
+}
+
+.frame-div-mainbody {
+	width:90%;
+	min-height:480px;
+	margin:0;
+	margin-left:5%;
+	margin-right:5%;
+	padding-top:1px;
+	background-color:#FFFFFF;
+}
+
+.frame-section {
+	position:relative;
+	margin-left:250px;
+	margin-right:250px;
+	margin-top:25px;
+	background-color:#FFFFFF;
+}
+
+.frame-section-left {
+	position:relative;
+	margin-left:0;
+	margin-right:250px;
+	margin-top:25px;
+	background-color:#FFFFFF;
+}
+
+.frame-section-right {
+	position:relative;
+	margin-left:250px;
+	margin-right:0;
+	margin-top:25px;
+	background-color:#FFFFFF;
+}
+
+.frame-article {
+	width:84%;
+	margin:8%;
+	margin-top:25px;
+	margin-bottom:25px;
+	border-radius:8px/5px;
+	padding:5px;
+	background-color:#EDEDED;
+}
+
+.frame-aside-left {
+	width:180px;
+	position:relative;
+	float:left;
+	margin:25px;
+	margin-right:0;
+	border-radius:8px/5px;
+	padding:15px;
+	background-color:#BFBFBF;
+}
+
+.frame-aside-right {
+	width:180px;
+	position:relative;
+	float:right;
+	margin:25px;
+	margin-left:0;
+	border-radius:8px/5px;
+	padding:15px;
+	background-color:#BFBFBF;
+}
+
+.frame-footer {
+	width:90%;
+	margin-top:-30px;
+	margin-left:5%;
+	margin-right:5%;
+	border-bottom-left-radius:16px 10px;
+	border-bottom-right-radius:16px 10px;
+	background-color:#7F7F7F;
+}
+
+.title {
+	width:120px;
+	position:relative;
+	float:left;
+	margin-left:20px;
+}
+
+.login {
+	width:100px;
+	position:relative;
+	float:right;
+	margin-right:20px;
+}
+
+li {
+	line-height:150%;
+}
+
+li.can-be-hidden {
+	list-style-image:url('../image/fold.gif');
+}
+
+ul.nav {
+	margin-left:20px;
+	list-style-image:url('../image/image.png');
+}
+
+ul a {
+	text-decoration:none;
+}
+
+table {
+	width:80%;
+	margin:5%;
+	text-align:center;
+	border:purple 4px;
+	border-style:dashed double;
+}
+
+td {
+	border:1px solid;
+}	

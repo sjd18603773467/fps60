@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .score {
+        background:#DFDFDF;
+    }
+</style>
+
+<h5>{{ rank_list[0][0] }} - {{ rank_list[0][1] }}</h5>
+<table>
+    <tr>
+        <th>名次</th>
+        <th>名字</th>
+        <th>得分</th>
+    </tr>
+    {% for i in rank_list[1:]: %}
+    <tr>
+        <td>{{ rank_list.index(i) }}</td>
+        <td {% if rank_list.index(i) == 1: %} style="border-color:#0000FF" {% elif rank_list.index(i) == 2: %} style="border-color:#FF0000" {% elif rank_list.index(i) == 3: %} style="border-color:#00FF00" {% endif %} >{{ i[0] }}</td>
+        <td>{{ i[1] }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
